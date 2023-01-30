@@ -17,7 +17,11 @@ import { CustomComponent } from './custom/custom.component';
     AppRoutingModule
   ],
   providers: [
-    // { provide:MessageService,useClass:NewMessageService}
+    { provide:MessageService,useValue:{
+      getMessage:()=>{
+        return "This message from useValue"
+      }
+    }}
   ],
   bootstrap: [AppComponent]
 })
