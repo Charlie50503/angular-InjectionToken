@@ -5,10 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewMessageService } from './new-message.service';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
