@@ -17,11 +17,12 @@ import { CustomComponent } from './custom/custom.component';
     AppRoutingModule
   ],
   providers: [
-    { provide:MessageService,useValue:{
-      getMessage:()=>{
-        return "This message from useValue"
+    {
+      provide: MessageService,
+      useFactory: () => {
+        return new Date().getFullYear() >= 2024 ? new NewMessageService() : new MessageService()
       }
-    }}
+    }
   ],
   bootstrap: [AppComponent]
 })
