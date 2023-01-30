@@ -17,7 +17,7 @@ import { CustomComponent } from './custom/custom.component';
     AppRoutingModule
   ],
   providers: [
-    { provide:MessageService,useClass:NewMessageService}
+    // { provide:MessageService,useClass:NewMessageService}
   ],
   bootstrap: [AppComponent]
 })
