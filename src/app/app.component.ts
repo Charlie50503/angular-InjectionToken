@@ -1,5 +1,7 @@
-import { Component, Inject, Optional } from '@angular/core';
+import { Component, Inject, InjectionToken, Optional } from '@angular/core';
 // import { MessageService } from './message.service';
+
+export const messageInjectToken = new InjectionToken<string>("Message Token");
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,7 @@ import { Component, Inject, Optional } from '@angular/core';
 export class AppComponent {
   constructor(
     // public messageService:MessageService,
-    @Inject("Message") @Optional() public message:string
+    @Inject("messageInjectToken") @Optional() public message:string
   ){
 
   }
