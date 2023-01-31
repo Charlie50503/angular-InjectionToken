@@ -17,7 +17,10 @@ import { CustomComponent } from './custom/custom.component';
     AppRoutingModule
   ],
   providers: [
-    { provide: messageInjectToken, useValue: "This is a message from string token." }
+    { provide: messageInjectToken, useValue: {
+      message:"a",
+      user:"b"
+    }}
   ],
   bootstrap: [AppComponent]
 })
