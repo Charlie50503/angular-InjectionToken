@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MessageService } from './message.service';
+import { Component, Inject } from '@angular/core';
+// import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,8 @@ import { MessageService } from './message.service';
 })
 export class AppComponent {
   constructor(
-    public messageService:MessageService
+    // public messageService:MessageService,
+    @Inject("Message") public message:string
   ){
 
   }
