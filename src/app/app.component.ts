@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Optional } from '@angular/core';
 // import { MessageService } from './message.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, Inject } from '@angular/core';
 export class AppComponent {
   constructor(
     // public messageService:MessageService,
-    @Inject("Message") public message:string
+    @Inject("Message") @Optional() public message:string
   ){
 
   }

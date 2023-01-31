@@ -17,7 +17,7 @@ import { CustomComponent } from './custom/custom.component';
     AppRoutingModule
   ],
   providers: [
-    { provide: "Message", useValue: "This is a message from string token." }
+    // { provide: "Message", useValue: "This is a message from string token." }
   ],
   bootstrap: [AppComponent]
 })
